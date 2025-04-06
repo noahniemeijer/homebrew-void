@@ -8,7 +8,6 @@ class Void < Formula
   def install
     bin.install "main.py"
   end
-end
 
   def caveats
     <<~EOS
