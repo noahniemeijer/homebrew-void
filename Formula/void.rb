@@ -1,7 +1,7 @@
 class Void < Formula
     desc "Terminal-based AI chat tool"
     homepage "https://github.com/noahniemeijer/void"
-    url "https://github.com/noahniemeijer/void/archive/refs/tags/v1.0.0.tar.gz"
+    url "https://github.com/noahniemeijer/void/archive/refs/tags/VOID-BETA.tar.gz"
     sha256 "PUT_YOUR_TARBALL_SHA256_HERE"
     license "MIT"
   
