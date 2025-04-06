@@ -6,7 +6,8 @@ class Void < Formula
   sha256 "a932245a708b92482dd5849d116bb5387decca5c048a93d848155a02ecedceed"
 
   def install
-    bin.install "main.py"
+    libexec.install "main.py"
+    bin.write_exec_script libexec/"main.py"
   end
 
   def caveats
