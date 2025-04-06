@@ -1,15 +1,14 @@
 class Void < Formula
-  desc "VOID – A terminal AI interface"
+  desc "My Project Description"
   homepage "https://github.com/noahniemeijer/void"
   url "https://github.com/noahniemeijer/VOID/archive/refs/tags/BETA.tar.gz"
   version "BETA"
   sha256 "a932245a708b92482dd5849d116bb5387decca5c048a93d848155a02ecedceed"
 
-  depends_on "python@3.12"
-
   def install
-    bin.install "main.py" => "void"
+    bin.install "main.py"
   end
+end
 
   def caveats
     <<~EOS
