@@ -10,10 +10,16 @@ class Void < Formula
     libexec.install "main.py"
     libexec.install "install.sh"
   
-    # Create symlinks to main.py with python3 explicitly
-    bin.write_exec_script "/opt/homebrew/bin/python3 #{libexec}/main.py"
+    # Create a wrapper script to run the Python script correctly
+    (bin/"void").write <<~EOS
+      #!/bin/bash
+      /opt/homebrew/bin/python3 #{libexec}/main.py "$@"
+    EOS
+  
+    # Create symlink to install.sh
     bin.write_exec_script libexec/"install.sh"
   end
+  
   
 
   def caveats
