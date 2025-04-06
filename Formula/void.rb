@@ -6,11 +6,13 @@ class Void < Formula
   sha256 "a932245a708b92482dd5849d116bb5387decca5c048a93d848155a02ecedceed"
 
   def install
-    # Install the main.py file into libexec
+    # Install both main.py and install.sh into libexec
     libexec.install "main.py"
+    libexec.install "install.sh"
     
-    # Create a symlink to main.py in /usr/local/bin, so it's accessible as 'void'
+    # Create symlinks to main.py and install.sh in /usr/local/bin
     bin.write_exec_script libexec/"main.py"
+    bin.write_exec_script libexec/"install.sh"
   end
 
   def caveats
